@@ -52,12 +52,12 @@ Instead of messing around on a Ubuntu server, you can also try out the flow in a
 Build the docker image:
 
 ```
- docker build -t ubuntuwithdeviceflowssh .  
+docker build -t ubuntuwithdeviceflowssh .
 ```
 Run the docker image:
 
 ```
-docker run -d -it -v ~/workspace/deviceflow/:/home/ubuntu -v ~/workspace/deviceflowsecurity/:/lib/security -p 1022:22  ubuntuwithdeviceflowssh
+docker run -d -it -p 1022:22  ubuntuwithdeviceflowssh
 ```
 
 where `~/workspace/deviceflow` contains the source files (this repo) locally, and `~/workspace/deviceflowsecurity/` is a directory to hold the compiled `deviceflow.so` file. 
